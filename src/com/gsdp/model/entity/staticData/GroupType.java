@@ -1,0 +1,15 @@
+package com.gsdp.model.entity.staticData;
+
+public class GroupType {
+	
+	
+	/**
+	 * 团体类别类，方便团体分类管理
+	 */
+	
+	public static int SPORT = 0 ;
+	public static int ART = 1;
+	public static int ACADEMIC = 2 ;
+	public static int SCIENCE = 3;
+
+}
