@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+    PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+    
+<configuration>
+	<!-- 配置全局的一些属性 -->
+	<settings>
+	<!-- 其默认为false，其使用jdbc的getGeneratedKeys来获取主键的自增值
+	比如当我们用jdbc在插入数据的时候，我们的主键是自增的话，我们就可以默认不插入这一列，
+	如果我们想得到插入后这列的值，我们就可以调用这个方法，mybatis在这里已经帮我们做了这个操作 -->
+		<setting name="useGeneratedKeys" value="true"/>
+		<!-- 默认为true 使用列别名替换列名 -->
+		<setting name="useColumnLabel" value="true"/>
+		<!-- 开启驼峰命名转换，create_time ->  createTime
+		默认我们数据库的命名规范应该是下划线，但是在java里面我们的命名规范
+		是驼峰命名，如果我们配置了这个，我们就不用去自己转命名(as的时候)了，mybatis为帮我们完成。 -->
+		<setting name="mapUnderscoreToCamelCase" value="true"/>
+	</settings>
+    	
+</configuration>
