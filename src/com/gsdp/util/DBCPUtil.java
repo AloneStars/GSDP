@@ -124,7 +124,7 @@ public class DBCPUtil {
 	    conn.close();
 	   }
 	  } catch (SQLException e) {
-	   log.error("关闭数据库连接失败：" + e);
+	   log.error("关闭数据库连接失败:hehe" + e);
 	  }
 	 }
 
