@@ -38,7 +38,7 @@
 		<property name="dataSource" ref="dataSource"/>
 		<!-- 配置mybatis全局配置文件 -->
 		<property name="configLocation" value="classpath:mybatis-config.xml"/>
-		<!-- 扫描entity包，并使用别名  com.gsdp.entity.* -> *
+		<!-- 扫描entity包(子包也可以)，并使用别名  com.gsdp.entity.* -> *
 			 比如我们在用resultType的时候，我们就没有写类的全名，就只写了一个类名
 		如果有多个包可以用;隔开 -->
 		<property name="typeAliasesPackage" value="com.gsdp.entity"/>

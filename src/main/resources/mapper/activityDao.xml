@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.gsdp.dao.ActivityDao">
+
+	<!-- 定义一个查询所有列的常量 -->
+	<sql id="columns">
+		activity_id,activity_title,activity_content,beginTime,
+		endTime,activitier,sponsor,activity_number,activity_address,
+		publishTime,permission
+	</sql>
+
+	<select id="getAllActivityMessage" resultType="Activity">
+		select
+		<include refid="columns"/>
+		from activity;
+	</select>
+	
+	<select id="getActivityMessage" resultType="Activity">
+		select
+		<include refid="columns"/>
+		from activity
+		<where>
+			sponsor = #{sponsor}
+		</where>
+	</select>
+	
+	
+	<insert id="addActivityMessage" keyProperty="activityId">
+		insert ignore activity(activity_title,activity_content,beginTime,endTime,activity_number,
+				activitier,sponsor,activity_address,permission,publishTime) 
+		values(#{activityTitle},#{activityContent},#{beginTime},#{endTime},#{activityNumber},
+		       #{activitier},#{sponsor},#{activityAddress},#{permission},#{publishTime});
+	</insert>
+	
+	
+	<delete id="deleteActivityMessage">
+		delete from activity 
+		<where>
+			activity_id = #{activityId};
+		</where>
+	</delete>
+	
+	
+	<update id="updateActivityMessage">
+		update activity
+		<set>
+			<if test="activityTitle != null and !activityTitle.equals('')">
+				acitvity_title = #{activityTitle},
+			</if>
+			<if test="activityContent != null and !activityContent.equals('')">
+				activity_content = #{activityContent},
+			</if>
+			<if test="beginTime != null and !beginTime.equals('')">
+				beginTime = #{beginTime},
+			</if>
+			<if test="endTime != null and !endTime.equals('')">
+				endTime = #{endTime},
+			</if>
+				activity_number = #{activityNumber},
+				activitier = #{activitier},
+				sponsor = #{sponsor},
+			<if test="activityAddress != null and !activityAddress.equals('')">
+				activity_address = #{activityAddress},
+			</if>
+				permission = #{permission},
+			<if test="publishTime != null and !publishTime.equals('')">
+				publishTime = #{publishTime},
+			</if>
+		</set>
+		<where>
+			activity_id = #{activityId};
+		</where>
+	</update>
+	
+	
+	<select id="queryAvitvityMessage" resultType="Activity">
+		select
+		<include refid="columns"/>
+		from activity
+		<where>
+			activity_id = #{activityId};
+		</where>
+	</select>
+
+</mapper>

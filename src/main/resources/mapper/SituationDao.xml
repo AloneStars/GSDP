@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+    
+<mapper namespace="com.gsdp.dao.SituationDao">
+	
+	<sql id="columns">
+		situation_id,situation_title,situation_content,publisher,publishTime,group_id
+	</sql>
+
+
+	<select id="getSituationMessage" resultType="Situation">
+		select
+		<include refid="columns"/>
+		from situation
+		<where>
+			group_id = #{groupId};
+		</where>
+	</select>
+	
+	
+	<select id="getSingleSituationMessage" resultType="Situation">
+		select
+			<include refid="columns"/>
+				from situation
+			<where>
+				situation_id = #{situationId};
+			</where>
+	</select>
+	
+	
+	<insert id="addSitutationMessage" keyProperty="situationId">
+		insert ignore situation(situation_title,situation_content,publisher,publishTime,group_id)
+		values(#{situationTitle},#{situationContent},#{publisher},#{publishTime},#{groupId});
+	</insert>
+	
+	
+	<delete id="deleteSituationMessage">
+		delete from situation
+		<where>
+			situation_id = #{situationId};
+		</where>
+	</delete>
+
+</mapper>
