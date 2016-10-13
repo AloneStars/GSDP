@@ -51,7 +51,7 @@ public class AllServlet extends HttpServlet {
 			//将操作写入session中
 			request.getSession().setAttribute("GroupId", Integer.parseInt(groupId));
 			System.out.println("session:GroupId="+groupId);
-			pw.print("http://localhost:8080/GDP/index/GroupMsg.html");
+			pw.print("http://localhost:8080/GSDP/index/GroupMsg.html");
 		}else{
 			pw.print("wrong params");
 			pw.close();
