@@ -1,272 +1,314 @@
-ul li{
-    list-style-type:none;
-    height:20px;
-    line-height: 20px;
+ul li {
+	list-style-type: none;
+	height: 20px;
+	line-height: 20px;
 }
-#content-container{
-	width:1024px;
-	height:1080px;	
-	margin:0px auto;
+
+#content-container {
+	width: 1024px;
+	height: 1080px;
+	margin: 0px auto;
 	margin-top: 10px;
 }
-#main_lobby{
-	height:1080px;
-	margin-left:20px;
-	margin-right:20px;
+
+#main_lobby {
+	height: 1080px;
+	margin-left: 20px;
+	margin-right: 20px;
 }
-.top{
-	height:400px;
+
+.top {
+	height: 400px;
 }
-.center{
-	height:600px;	
+
+.center {
+	height: 600px;
 }
-.under{
-	height:70px;
-	background:rgba(255,255,255,0.5);
+
+.under {
+	height: 70px;
+	background: rgba(255, 255, 255, 0.5);
 }
-.center_top{
-	margin-top:10px;
-	height:290px;
+
+.center_top {
+	margin-top: 10px;
+	height: 290px;
 }
-.center_bottom{
-	margin-top:10px;
-	height:290px;
+
+.center_bottom {
+	margin-top: 10px;
+	height: 290px;
 }
-.top_left{
-	width:600px;
-	height:400px;
-	float:left;
-	background:rgba(255,255,255,0.5);
+
+.top_left {
+	width: 600px;
+	height: 400px;
+	float: left;
+	background: rgba(255, 255, 255, 0.5);
 }
-.top_right{
-	width:370px;
-	height:400px;
-	margin-left:10px;	
-	float:left;
+
+.top_right {
+	width: 370px;
+	height: 400px;
+	margin-left: 10px;
+	float: left;
 }
-.top_right_top{
-	height:195px;
-	background:rgba(255,255,255,0.5);
+
+.top_right_top {
+	height: 195px;
+	background: rgba(255, 255, 255, 0.5);
 }
-.top_right_bottom{
-	height:195px;
-	margin-top:10px;
-	background:rgba(255,255,255,0.5);
+
+.top_right_bottom {
+	height: 195px;
+	margin-top: 10px;
+	background: rgba(255, 255, 255, 0.5);
 }
-.center_top_left{
-	width:600px;
-	height:100%;
-	float:left;
-	background:rgba(255,255,255,0.5);
+
+.center_top_left {
+	width: 600px;
+	height: 100%;
+	float: left;
+	background: rgba(255, 255, 255, 0.5);
 }
-.center_top_right{
-    width:370px;
-    height:100%;
-    margin-left:10px;
-    float:left;
-    background:rgba(255,255,255,0.5);
+
+.center_top_right {
+	width: 370px;
+	height: 100%;
+	margin-left: 10px;
+	float: left;
+	background: rgba(255, 255, 255, 0.5);
 }
-.center_bottom_left{
-    width:295px;
-    height:100%;
-    float:left;
-    background:rgba(255,255,255,0.5);
+
+.center_bottom_left {
+	width: 295px;
+	height: 100%;
+	float: left;
+	background: rgba(255, 255, 255, 0.5);
 }
-.center_bottom_center{
-	width:295px;
-	height:100%;
-	margin-left:10px;
-	float:left;
-	background:rgba(255,255,255,0.5);
+
+.center_bottom_center {
+	width: 295px;
+	height: 100%;
+	margin-left: 10px;
+	float: left;
+	background: rgba(255, 255, 255, 0.5);
 }
-.center_bottom_right{
-	width:370px;
-	height:100%;
-	margin-left:10px;
-	float:left;
-	background:rgba(255,255,255,0.5);
+
+.center_bottom_right {
+	width: 370px;
+	height: 100%;
+	margin-left: 10px;
+	float: left;
+	background: rgba(255, 255, 255, 0.5);
 }
-.index_banner{
-	height:30px;
+
+.index_banner {
+	height: 30px;
 	line-height: 30px;
-	color:#fff;
-	font-size:20px;
-	padding-left:10px;
+	color: #fff;
+	font-size: 20px;
+	padding-left: 10px;
 	border-bottom: 1px solid #fff;
 	border-radius: 5px 5px 0px 0px;
-	background: rgba(0,0,0,0.4);
+	background: rgba(0, 0, 0, 0.4);
 }
-.carousel-control{
-	top:50%;
-	margin-left:20px;
-	margin-right:20px;
-	margin-bottom:-25px;
-	width:40px;
-	height:40px;
+
+.carousel-control {
+	top: 50%;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: -25px;
+	width: 40px;
+	height: 40px;
 	border-radius: 5px;
 }
-.item img{
-	width:598px;
-	height:368px !important;
+
+.item img {
+	width: 598px;
+	height: 368px !important;
 	border-radius: 0 0 5 5;
 }
-.carousel-caption{
-	left:0px;
-	right:0px;
-	bottom:0px;
-	padding-top:0px;
-	padding-left:20px;
-	font-size:16px;
-	text-align:left;
-	width:100%;
-	height:40px;
+
+.carousel-caption {
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	padding-top: 0px;
+	padding-left: 20px;
+	font-size: 16px;
+	text-align: left;
+	width: 100%;
+	height: 40px;
 	line-height: 40px;
-	background: rgba(0,0,0,0.4);
+	background: rgba(0, 0, 0, 0.4);
 }
-.carousel-indicators{
-	width:20%;
-	height:40px;
-	left:80%;
-	right:0px;
-	bottom:0px;
-	margin:0px;	
-	padding-top:10px;
-	padding-right:20px;
-	background: rgba(0,0,0,0);
+
+.carousel-indicators {
+	width: 20%;
+	height: 40px;
+	left: 80%;
+	right: 0px;
+	bottom: 0px;
+	margin: 0px;
+	padding-top: 10px;
+	padding-right: 20px;
+	background: rgba(0, 0, 0, 0);
 }
-.Best_group{
-	height:161px;
-	padding:10px;
+
+.Best_group {
+	height: 161px;
+	padding: 10px;
 }
-.groupIcon{
-    width:140px;
-    height:140px;
-    border:2px solid #fff;
-    border-radius:10px;
-    float:left;
-    background: url("../image/GroupIcon/Star.jpg") no-repeat;
+
+.groupIcon {
+	width: 140px;
+	height: 140px;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	float: left;
+	background: url("../image/GroupIcon/Star.jpg") no-repeat;
 }
-.groupDec{
-	width:190px;
-	height:140px;
-	background: rgba(0,0,0,0.4);
-	border-radius:5px;
-	margin-left:10px;	
-	padding-top:10px;
-	padding-left:5px;
-	float:left;
+
+.groupDec {
+	width: 190px;
+	height: 140px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+	margin-left: 10px;
+	padding-top: 10px;
+	padding-left: 5px;
+	float: left;
 }
-.name{
-	height:20px;
+
+.name {
+	height: 20px;
 	text-align: center;
 	font-size: 16px;
-	color:#fff;
+	color: #fff;
 }
-.time{
+
+.time {
 	text-indent: 2em;
-    font-size:12px;
-	color:#fff;
+	font-size: 12px;
+	color: #fff;
 }
-.dec{
+
+.dec {
 	text-indent: 2em;
-	font-size:12px;
-	color:#fff;
+	font-size: 12px;
+	color: #fff;
 	overflow: hidden;
-	text-overflow:ellipsis;
+	text-overflow: ellipsis;
 }
-.Best_member{
-	height:161px;
+
+.Best_member {
+	height: 161px;
 	/*border:1px solid red;*/
-	padding:10px;
+	padding: 10px;
 }
-.top_container{
-	height:100px;
+
+.top_container {
+	height: 100px;
 }
-.bottom_container{
-	margin-top:8px;
-	height:40px;
-	background: rgba(0,0,0,0.4);
-	border-radius:5px;
+
+.bottom_container {
+	margin-top: 8px;
+	height: 40px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
 }
-.userIcon{
-	width:100px;
-    height:100px;
-    border:2px solid #fff;
-    border-radius:10px;
-    float:left;
-    background: url("../image/GroupIcon/Star.jpg") no-repeat;
-    float: left;
+
+.userIcon {
+	width: 100px;
+	height: 100px;
+	border: 2px solid #fff;
+	border-radius: 10px;
+	float: left;
+	background: url("../image/GroupIcon/Star.jpg") no-repeat;
+	float: left;
 }
-.userDec{
-	width:230px;
-	height:100px;
-	background: rgba(0,0,0,0.4);
-	border-radius:5px;
-	margin-left:10px;	
-	padding-top:10px;
-	padding-left:5px;
-	float:left;
+
+.userDec {
+	width: 230px;
+	height: 100px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 5px;
+	margin-left: 10px;
+	padding-top: 10px;
+	padding-left: 5px;
+	float: left;
 }
-.belong{
+
+.belong {
 	text-indent: 2em;
-    font-size:12px;
-	color:#fff;
+	font-size: 12px;
+	color: #fff;
 }
-.achievement{
+
+.achievement {
 	font-size: 14px;
-	color:#fff;
+	color: #fff;
 	line-height: 40px;
 }
-.activityList{
-	height:215px;
-	margin-top:20px;
-	margin-left:40px;
+
+.activityList {
+	height: 215px;
+	margin-top: 20px;
+	margin-left: 40px;
 }
-.List{
-	width:248px;
-	height:100%;
+
+.List {
+	width: 248px;
+	height: 100%;
 	overflow-y: hidden;
-	float:left;
+	float: left;
 }
-.gap{
-	padding-top:10px;
-	padding-left:40px;
-	padding-right:10px;
+
+.gap {
+	padding-top: 10px;
+	padding-left: 40px;
+	padding-right: 10px;
 }
-.title{
-	display:block;
-	color:#333;
-	width:80%;
+
+.title {
+	display: block;
+	color: #333;
+	width: 80%;
 	overflow: hidden;
-	text-overflow:ellipsis;
-	float:left;
+	text-overflow: ellipsis;
+	float: left;
 }
-.situationList{
-	height:215px;
+
+.situationList {
+	height: 215px;
 	margin-top: 20px;
 }
-.situationList ul{
-	width:250px;
-	height:100%;
-	margin:0px auto;
+
+.situationList ul {
+	width: 250px;
+	height: 100%;
+	margin: 0px auto;
 }
-.img{
-	border:1px solid #666;
-	margin:0px auto;
-	width:293px;
-	height:259px;
+
+.img {
+	border: 1px solid #666;
+	margin: 0px auto;
+	width: 293px;
+	height: 259px;
 	/*background:url("../image/GroupIcon/Star.jpg");*/
 	/*background:#08c;*/
 	background-size: cover;
-	border-radius:0 0 5px 5px;
+	border-radius: 0 0 5px 5px;
 }
-.alt{
-	width:100%;
-	height:40px;
-	color:#fff;
+
+.alt {
+	width: 100%;
+	height: 40px;
+	color: #fff;
 	line-height: 40px;
-	padding-left:20px;
-	background:rgba(0,0,0,0.4);
-	margin-top:217px;
+	padding-left: 20px;
+	background: rgba(0, 0, 0, 0.4);
+	margin-top: 217px;
 	border-radius: 0 0 5px 5px;
 }

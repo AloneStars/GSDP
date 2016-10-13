@@ -72,11 +72,11 @@ function initgroupAvitvity(groupId){
 
 
 function initGroupSituation(groupId){
-   var Addresss = "http://localhost:8080/GDP/GSMS";
+   var Addresss = "http://localhost:8080/GSDP/GSMS";
 
    $.ajax({
       type:"post",
-      url:"http://localhost:8080/GDP/GSMS",
+      url:"http://localhost:8080/GSDP/GSMS",
       dataType:"json",
       data:{
          GroupId:groupId,
