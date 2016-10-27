@@ -44,10 +44,10 @@
 		</bean>
 		
 		<!-- 200 * 1012 * 1024既是200m，resolveLazily启动是为了推迟文件解析，以便捕获文件大小异常 -->
-	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
 			<property name="maxUploadSize" value="209715200"/>
 			<property name="defaultEncoding" value="utf-8"/>
 			<property name="resolveLazily" value="true"/>
-	</bean>
+		</bean>
 		
 </beans>

@@ -1,5 +1,6 @@
 package com.gsdp.entity.group;
 
+
 public class Notice {
 	
 	//通知Id
@@ -17,8 +18,16 @@ public class Notice {
 	//通知发布到那个组织
 	private int groupId;
 
-	//-----------------------------
+	public Notice() {};
 	
+	public Notice(String noticeContent, String noticeTime, int noticer,
+			int groupId) {
+		this.noticeContent = noticeContent;
+		this.noticeTime = noticeTime;
+		this.noticer = noticer;
+		this.groupId = groupId;
+	}
+
 	public int getNoticeId() {
 		return noticeId;
 	}
@@ -58,8 +67,6 @@ public class Notice {
 	public void setGroupId(int groupId) {
 		this.groupId = groupId;
 	}
-	
-	//-----------------------------
 
 	@Override
 	public String toString() {
@@ -67,5 +74,5 @@ public class Notice {
 				+ noticeContent + ", noticeTime=" + noticeTime + ", noticer="
 				+ noticer + ", groupId=" + groupId + "]";
 	}
-
+	
 }

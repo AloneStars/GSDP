@@ -1,5 +1,7 @@
 package com.gsdp.entity.group;
 
+import com.gsdp.entity.user.User;
+
 public class Reply {
 	
 	//该条回复(评论)的id
@@ -16,6 +18,9 @@ public class Reply {
 	
 	//针对那条动态的回复或者评论
 	private int situationId;
+	
+	//发这条评论的人
+	private User user;
 
 	//-------------------------
 	
@@ -58,16 +63,23 @@ public class Reply {
 	public void setSituationId(int situationId) {
 		this.situationId = situationId;
 	}
+		
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
 	
-	//------------------------------
 	
 	@Override
 	public String toString() {
 		return "Reply [replyId=" + replyId + ", replyContent=" + replyContent
 				+ ", replyer=" + replyer + ", replyTime=" + replyTime
-				+ ", situationId=" + situationId + "]";
+				+ ", situationId=" + situationId + ", user=" + user + "]";
 	}
-	
-	
+
 
 }

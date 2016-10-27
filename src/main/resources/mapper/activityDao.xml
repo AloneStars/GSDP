@@ -48,7 +48,7 @@
 		update activity
 		<set>
 			<if test="activityTitle != null and !activityTitle.equals('')">
-				acitvity_title = #{activityTitle},
+				activity_title = #{activityTitle},
 			</if>
 			<if test="activityContent != null and !activityContent.equals('')">
 				activity_content = #{activityContent},

@@ -12,11 +12,23 @@ public class News {
 	
 	private int toAddress;
 	
-	private long sendTime;
+	private String sendTime;
 	
 	//标记是否已阅读，已读还是未读
 	private int statue;
 	
+	public News() {};
+	
+	public News(String newsTitle, String newsContent, int fromAddress,
+			int toAddress, String sendTime, int statue) {
+		this.newsTitle = newsTitle;
+		this.newsContent = newsContent;
+		this.fromAddress = fromAddress;
+		this.toAddress = toAddress;
+		this.sendTime = sendTime;
+		this.statue = statue;
+	}
+
 	//--------------------------
 
 	public int getNewsId() {
@@ -59,11 +71,11 @@ public class News {
 		this.toAddress = toAddress;
 	}
 
-	public long getSendTime() {
+	public String getSendTime() {
 		return sendTime;
 	}
 
-	public void setSendTime(long sendTime) {
+	public void setSendTime(String sendTime) {
 		this.sendTime = sendTime;
 	}
 

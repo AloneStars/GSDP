@@ -25,9 +25,30 @@ public class Group {
 	
 	//团体创建者
 	private int owner;
-
-	//----------------------
 	
+	public Group() {};
+	
+
+	public Group(String groupIcon, String groupName, String groupDec,
+			String groupContact, String groupAddress, int groupType, int owner) {
+		this.groupIcon = groupIcon;
+		this.groupName = groupName;
+		this.groupDec = groupDec;
+		this.groupContact = groupContact;
+		this.groupAddress = groupAddress;
+		this.groupType = groupType;
+		this.owner = owner;
+	}
+	
+
+	public Group(int groupId, String groupIcon, String groupName,
+			String groupDec, String groupContact, String groupAddress,
+			int groupType, int owner) {
+		this(groupIcon, groupName, groupDec, groupContact, groupAddress, groupType, owner);
+		this.groupId = groupId;
+	}
+
+
 	public int getGroupId() {
 		return groupId;
 	}

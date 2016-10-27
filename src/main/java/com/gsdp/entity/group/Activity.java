@@ -35,6 +35,8 @@ public class Activity {
 	//开放权限
 	private int permission;
 	
+	public Activity() {}
+	
 	public Activity(String activityTitle, String activityContent,
 			String beginTime, String endTime, int activitier, int sponsor,
 			int activityNumber, String activityAddress, String publishTime,
@@ -49,6 +51,15 @@ public class Activity {
 		this.activityAddress = activityAddress;
 		this.publishTime = publishTime;
 		this.permission = permission;
+	}
+	
+	public Activity(int activityId, String activityTitle, String activityContent,
+			String beginTime, String endTime, int activitier, int sponsor,
+			int activityNumber, String activityAddress, String publishTime,
+			int permission) {
+
+			this(activityTitle, activityContent, beginTime, endTime, activitier, sponsor, activityNumber, activityAddress, publishTime, permission);
+			this.activityId = activityId;
 	}
 
 	//----------------------------------

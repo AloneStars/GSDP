@@ -25,7 +25,7 @@ public class User {
 	private List<Group> groups;  
 	
 	//个性签名，或者说是个人介绍
-	private String userDec;  
+	private String userDec;
 	
 	//性别
 	private int sex;   

@@ -9,7 +9,7 @@
 		situation_id,situation_title,situation_content,publisher,publishTime,group_id
 	</sql>
 
-
+ 
 	<select id="getSituationMessage" resultType="Situation">
 		select
 		<include refid="columns"/>
@@ -19,15 +19,88 @@
 		</where>
 	</select>
 	
+	<!-- 
+	其实在实际的运用中，我们并用不到这么多的属性。这里我只是测试一下 ，
+	关于这里我column用这种命名的方式，第一是防止列别名冲突，第二种方式是能够很清楚的看出来
+	相应的对应关系，但是在用这种别名的时候，我们一定要用“”括起来，因为有.这个符号
+	-->
+	<resultMap type="Situation" id="situationResultMap">
+		<id column="situation_id" property="situationId" jdbcType="INTEGER"/>
+		<result column="situation_title" property="situationTitle" jdbcType="VARCHAR"/>
+		<result column="situation_content" property="situationContent" jdbcType="VARCHAR"/>
+		<result column="publisher" property="publisher" jdbcType="INTEGER"/>
+		<result column="publishTime" property="publishTime" jdbcType="DATE"/>
+		<result column="group_id" property="groupId" jdbcType="INTEGER"/>
+		<collection property="replies" ofType="Reply">
+			<id column="replies.reply_id" property="replyId" jdbcType="INTEGER"/>
+			<result column="replies.reply_content" property="replyContent" jdbcType="VARCHAR"/>
+			<result column="replies.replyer" property="replyer" jdbcType="INTEGER"/>
+			<result column="replies.replyTime" property="replyTime" jdbcType="DATE"/>
+			<result column="replies.situation_id" property="situationId" jdbcType="INTEGER"/>
+			<association property="user" javaType="User">
+				<id column="replies.user.user_id" property="userId" jdbcType="INTEGER"/>
+				<result column="replies.user.headPicture" property="headPicture" jdbcType="VARCHAR"/>
+				<result column="replies.user.loginEmail" property="loginEmail" jdbcType="VARCHAR"/>
+				<result column="replies.user.password" property="password" jdbcType="VARCHAR"/>
+				<result column="replies.user.username" property="username" jdbcType="VARCHAR"/>
+				<result column="replies.user.user_dec" property="userDec" jdbcType="VARCHAR"/>
+				<result column="replies.user.sex" property="sex" jdbcType="INTEGER"/>
+				<result column="replies.user.age" property="age" jdbcType="INTEGER"/>
+				<result column="replies.user.wechat" property="weChat" jdbcType="VARCHAR"/>
+				<result column="replies.user.phone" property="phone" jdbcType="VARCHAR"/>
+				<result column="replies.user.lstatue" property="lstatue" jdbcType="INTEGER"/>
+			</association>
+		</collection>
+	</resultMap>
+	 
+	<select id="getSingleSituationMessage" resultMap="situationResultMap">
+	 	select
+	 	s.situation_id as "situation_id",
+	 	s.situation_title as "situation_title",
+	 	s.situation_content as "situation_content",
+	 	s.publisher as "publisher",
+	 	s.publishTime as "publishTime",
+	 	s.group_id as "group_id",
+	 	
+	 	
+	 	r.reply_id as "replies.reply_id",
+	 	r.reply_content as "replies.reply_content",
+	 	r.replyer as "replies.replyer",
+	 	r.replyTime as "replies.replyTime",
+	 	r.situation_id as "replies.situation_id",
+	 	
+	 	
+	 	u.user_id as "replies.user.user_id",
+	 	u.headPicture as "replies.user.headPicture",
+	 	u.loginEmail as "replies.user.loginEmail",
+	 	u.password as "replies.user.password",
+	 	u.username as "replies.user.username",
+	 	u.user_dec as "replies.user.user_dec",
+	 	u.sex as "replies.user.sex",
+	 	u.age as "replies.user.age",
+	 	u.wechat as "replies.user.wechat",
+	 	u.phone as "replies.user.phone",
+	 	u.lstatue as "replies.user.lstatue"
+	 	from situation as s
+	 	inner join reply as r on s.situation_id = r.situation_id
+	 	inner join user as u on r.replyer = u.user_id
+	 	<where>
+	 		s.situation_id = #{situationId} order by r.reply_id desc 
+	 		limit ${offset},${limit};
+	 	</where>
+	 	
+	 </select>
+	 
+	 
 	
-	<select id="getSingleSituationMessage" resultType="Situation">
+	<!-- <select id="getSingleSituationMessage" resultType="Situation">
 		select
 			<include refid="columns"/>
 				from situation
 			<where>
 				situation_id = #{situationId};
 			</where>
-	</select>
+	</select> -->
 	
 	
 	<insert id="addSitutationMessage" keyProperty="situationId">
